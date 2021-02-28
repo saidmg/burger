@@ -1,0 +1,14 @@
+body{
+    background-color: orangered;
+}
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h5{
+    color: white;
+}
+li{
+    pointer-events: none;
+}
