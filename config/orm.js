@@ -6,7 +6,6 @@ async function selectAll(){
 }
 
 async function insertOne(burger){
-   console.log(burger)
     let result = await db.query( `INSERT INTO  burgers (burger_name,devoured)  Values ('${burger.burgerName}',false)`)
     return result
 }

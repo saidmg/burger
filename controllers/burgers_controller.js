@@ -13,22 +13,21 @@ router.get('/', async function (req, res) {
 
 router.get('/', async function (req, res) {
     const result = await orm.updateOne()
-    console.log('[/ PUT] updateBurger:', updateBurger);
-    res.send(result)
+    res.redirect("/")
 })
 
 router.post('/api/burger', async function (req, res) {
     let burgerName = req.body
-    console.log(burgerName)
     const insertBurger = await orm.insertOne(burgerName)
-    console.log('[/ POST] insertBurger:', insertBurger);
+    res.redirect("/")
+
 })
 
 router.post('/api/burger/:id', async function (req, res) {
     const id = req.params.id
-    console.log(id)
     const updateBurger = await orm.updateOne(id)
-    console.log('[/ PUT] updateBurger:', updateBurger);
+    res.redirect("/")
+
 })
 
 module.exports = router;
